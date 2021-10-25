@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    background-color: rgb(156, 34, 116);
+    color: black;
+    font-size: 21px;
+    height: 75px;
+    display:flex;
+    align-items: center;
+    padding: 0px 12px;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+nav ul{
+    list-style-type: none;
+
+
+}
+.gameContainer{
+    
+     display:flex;
+    justify-content: center;
+
+
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    padding: 10px;
+    position:relative
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(250, 170, 243);
+
+}
+.gameinfo{
+    padding: 40px;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+.gameinfo img {
+    width: 0;
+    height: auto;
+    transition: width .5s ease-in-out
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left:0;
+}
+.bb-0{
+    border-bottom:0;
+}
+.bt-0{
+    border-top:0;
+}
+.info{
+    font-size: 25px;
+}
+#reset{
+    margin: 23px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Baloo Tamma 2', cursive;
+    padding: 2px;
+    cursor: pointer;
+    background-color: rgb(179, 127, 228);
+
+}
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #060a4dda;
+    transition: width 1s ease-in-out;
+}
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
